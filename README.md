@@ -1373,7 +1373,7 @@ local spinStartBtn = makeBigBtn(ctrlScroll, "تشغيل الدوران", 274,
  Color3.fromRGB(140, 220, 40), Color3.fromRGB(80, 150, 20))
 local spinStopBtn = makeBigBtn(ctrlScroll, "إيقاف الدوران", 328,
  Color3.fromRGB(170, 30, 30), Color3.fromRGB(110, 15, 15))
-local titleBtn = makeBigBtn(ctrlScroll, "تقليد الشات", 382,
+local titleBtn = makeBigBtn(ctrlScroll, "تلوين الشات🖍️", 382,
  Color3.fromRGB(170, 70, 220), Color3.fromRGB(100, 30, 150))
 local allBtn = makeBigBtn(ctrlScroll, "نسخ all", 436,
  Color3.fromRGB(30, 180, 255), Color3.fromRGB(10, 100, 180))
@@ -1864,12 +1864,12 @@ print("[SH RGB] Loaded")
 ]==]
 
 titleBtn.MouseButton1Click:Connect(function()
- ctrlStatus.Text = "جاري تشغيل مراقبة الشات..."
+ ctrlStatus.Text = "جاري تشغيل تلوين الشات..."
  task.spawn(function()
  local ok, err = pcall(function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Shhd-code/NAH/refs/heads/main/README.md"))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Shhd-code/ColorChat/refs/heads/main/README.md"))()
  end)
- if ok then ctrlStatus.Text = "تم تشغيل مراقبة الشات"
+ if ok then ctrlStatus.Text = "تم تشغيل تلوين الشات"
  else ctrlStatus.Text = "فشل: " .. tostring(err):sub(1, 60) end
  end)
 end)
